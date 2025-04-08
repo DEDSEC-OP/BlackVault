@@ -1,9 +1,15 @@
 #!/bin/bash
-# Car Hacking Utilities (Concept)
+# car_hacking.sh
 
-echo -e "\n[+] Starting Car Hacking Toolkit..."
-echo "[!] Feature ideas:"
-echo "- CAN Bus sniffing"
-echo "- Key fob replay attacks"
-echo "- Diagnostic code scans"
-# Future modules could interface with USB OBD-II readers etc.
+clear
+echo "Enter your OBD-II port (e.g., /dev/ttyUSB0):"
+read port
+
+# Check if the device is available
+if ! [ -e "$port" ]; then
+    echo "Error: Device $port not found."
+    exit 1
+fi
+
+echo "Connecting to OBD-II port $port..."
+# Insert logic to interact with the car's OBD-II system (e.g., using obd2cli or similar tools)
