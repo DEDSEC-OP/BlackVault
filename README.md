@@ -1,4 +1,3 @@
-# README.md - BlackVault script
 # BlackVault — Terminal Domination Toolkit
 
 > **Built by Bandz & Ms. Joplin**  
