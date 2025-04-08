@@ -1,8 +1,15 @@
 #!/bin/bash
-# RFID Tools Module (Concept)
+# rfid_tools.sh
 
-echo -e "\n[+] RFID Tools Initialized"
-echo "[!] Placeholder for RFID/NFC-based attacks"
-echo "- Read card IDs"
-echo "- Clone simple tags"
-# Could integrate with libnfc, PN532, or Proxmark3 utilities
+clear
+echo "Enter RFID tag ID (leave blank to scan):"
+read rfid_id
+
+# If blank, attempt to scan
+if [ -z "$rfid_id" ]; then
+    echo "Scanning RFID tag..."
+    # Logic to scan RFID tag using reader (e.g., using Python or other tools)
+else
+    echo "Writing data to RFID tag $rfid_id..."
+    # Logic to write data to the RFID tag
+fi
